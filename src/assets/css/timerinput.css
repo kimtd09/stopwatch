@@ -1,0 +1,71 @@
+.timerinput-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    gap: 5px;
+}
+
+.timerinput-container svg {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.timerinput-edit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.timerinput-edit::after {
+    content: "";
+    width: 24px;
+}
+
+.timerinput-edit span {
+    height: 25px;
+}
+
+.timerinput-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.timerinput-row {
+    display: flex;
+    gap: 10px;
+}
+
+.timerinput-row div {
+    width: 50px;
+    text-align: end;
+}
+
+.timerinput-row input {
+    text-align: center;
+    border: 1px rgb(60,60,60) solid;
+    font-size: 15px;
+}
+
+.timerinput-row button {
+    border: none;
+    color: rgba(211, 211, 211, 0.781);
+    background-color: rgb(60,60,60);
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.timerinput-warning {
+    color: red;
+}
+
+.timerinput-ok {
+    color: green;
+}

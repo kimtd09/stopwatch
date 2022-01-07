@@ -1,0 +1,185 @@
+.stopwatch-pagecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+
+    background-color: rgb(30, 30, 30);
+    user-select: none;
+}
+
+.stopwatch-pagecontainer::before {
+    content: "";
+    height: 35px;
+    width: 100%;
+}
+
+.stopwatch-maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stopwatchring-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.stopwatch-circle {
+    --size: 400px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0px rgb(30, 30, 30) inset, 0 0 3px 0px rgb(30, 30, 30);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stopwatch-circle span:nth-child(2) {
+    color: wheat;
+    font-size: 1.5em;
+}
+
+.stopwatch-ring {
+    --value: 10%;
+    background: conic-gradient(dodgerblue var(--value), rgb(60, 60, 60) 0);
+}
+
+.stopwatch-innercircle {
+    --size: 385px;
+    background-color: rgb(30, 30, 30);
+}
+
+.stopwatch-text {
+    font-size: 2.8em;
+    color: wheat;
+    cursor: pointer;
+}
+
+.stopwatch-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* gap: 20px; */
+    /* background-color: royalblue; */
+}
+
+.stopwatch-buttons > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --size: 40px;
+    height: var(--size);
+    width: calc(var(--size) * 2.5);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.stopwatch-buttons::before {
+    content: "";
+    width: 100px;
+}
+
+.stopwatch-buttons div:nth-child(2) svg {
+    /* background-color: saddlebrown; */
+    transform: scale(1.3);
+}
+
+.stopwatch-pause {
+    background-color: rgb(60, 60, 60);
+    border-radius: 20px;
+
+    padding: 5px 0;
+}
+
+.stopwatch-pause:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.stopwatch-maincontainer svg {
+    fill: rgba(211, 211, 211, 0.781);
+    height: 24px;
+    width: 24px;
+    transform: scale(2);
+}
+
+.stopwatch-links-contenair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 35px;
+    align-items: center;
+    background-color: rgb(60, 60, 60);
+    width: 100%;
+    cursor: pointer;
+}
+
+.stopwatch-links {
+    text-align: center;
+    color: white;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(30, 30, 30, 0.63);
+    border-top: 3px solid transparent;
+}
+
+.stopwatch-links:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.stopwatch-links-selected {
+    border-top: 3px solid dodgerblue;
+}
+.stopwatch-links-selected:hover {
+    background-color: rgb(60, 60, 60);
+    cursor: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .stopwatch-circle {
+        --size: 300px;
+    }
+
+    .stopwatch-innercircle {
+        --size: 285px;
+    }
+
+    .stopwatch-pause {
+        --size: 30px;
+    }
+
+    .stopwatch-maincontainer svg {
+        transform: scale(1.5);
+    }
+
+    .stopwatch-links span {
+        font-size: 15px;
+    }
+
+    .stopwatch-text {
+        font-size: 2.3em;
+    }
+}
+
+.hidden,
+.hidden > * {
+    display: none;
+}
+
+.stopwatch-debug {
+    position: fixed;
+    top: 22px;
+    left : 5px;
+    color: greenyellow;
+    height: 120px;
+    width: 100px;
+    background-color: rgba(66, 66, 66, 0.479);
+    font-size: 13px;
+}
